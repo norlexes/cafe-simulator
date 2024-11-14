@@ -3,6 +3,11 @@
 //import g4p
 
 void setup(){
-  createGUI();
+  //createGUI();
   size(1500,1500);
+}
+
+void draw(){
+
+  drawCup(); 
 }
