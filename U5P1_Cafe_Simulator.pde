@@ -3,8 +3,9 @@
 //import g4p
 
 void setup(){
-  createGUI();
-  size(1500,1500);
+  //createGUI();
+  background(222,163,80);
+  size(1280,650);
 }
 
 void draw(){
