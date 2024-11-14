@@ -1,0 +1,13 @@
+//CAFE SIMULATOR
+import g4p_controls.*;
+int numClicks = 0;
+
+void setup(){
+  createGUI();
+  background(222,163,80);
+  size(1280,650);
+}
+
+void draw(){
+  println(numClicks);
+}
