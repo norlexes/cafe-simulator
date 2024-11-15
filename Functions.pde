@@ -22,5 +22,4 @@ void drawCup(){
   float yCupHandle = upperLeftY + (cupHeight/2); 
   circle(xCupHandle, yCupHandle, 275); 
   
-  
 }

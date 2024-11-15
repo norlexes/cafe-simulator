@@ -16,17 +16,17 @@
 
 public void button1_click1(GButton source, GEvent event) { //_CODE_:button1:674502:
   println("ADDED COFEE");
-  numClicks ++;
+  //numClicks ++;
 } //_CODE_:button1:674502:
 
 public void button2_click1(GButton source, GEvent event) { //_CODE_:button2:733988:
   println("ADDED MILK");
-  numClicks ++ ;
+  //numClicks ++ ;
 } //_CODE_:button2:733988:
 
 public void button3_click1(GButton source, GEvent event) { //_CODE_:button3:881086:
   println("button3 - GButton >> GEvent." + event + " @ " + millis());
-  numClicks ++ ; 
+  //numClicks ++ ; 
 } //_CODE_:button3:881086:
 
 
@@ -44,7 +44,7 @@ public void createGUI(){
   button2 = new GButton(this, 1061, 226, 140, 100);
   button2.setText("ADD MILK");
   button2.addEventHandler(this, "button2_click1");
-  button3 = new GButton(this, 1066, 369, 140, 100);
+  button3 = new GButton(this, 1066, 367, 140, 100);
   button3.setText("ADD ESPRESSO");
   button3.addEventHandler(this, "button3_click1");
 }
