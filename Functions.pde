@@ -23,3 +23,28 @@ void drawCup(){
   circle(xCupHandle, yCupHandle, 275); 
   
 }
+
+void drawIngredients(){
+   float IngredientX = 500; 
+  float IngredientY = 500; 
+  for (int i = 0; i < ingredients.size(); i++){
+    IngredientY -= 100;
+    if(ingredients.get(i).equals("C")){
+      pushStyle();
+      fill(81, 65, 47); 
+      stroke(81, 65, 47); 
+      rect(IngredientX, IngredientY, 300, 100); 
+       popStyle(); 
+    }else if(ingredients.get(i).equals("M")){ 
+      fill(254, 252, 234); 
+      stroke(254, 252, 234); 
+      rect(IngredientX, IngredientY, 300, 100); 
+    }else if(ingredients.get(i).equals("E")){
+     pushStyle();
+      fill(50, 34, 21); 
+      stroke(50, 34, 21);
+      rect(IngredientX, IngredientY, 300, 100);
+       popStyle(); 
+    }
+  }  
+}
