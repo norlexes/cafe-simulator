@@ -5,6 +5,7 @@ boolean clickInButtonCof = false;
 boolean clickInButtonMilk = false;
 boolean clickInButtonEspresso = false;
 ArrayList<PVector> clickCount; 
+Menu coffee; //variable for the menu
 
 void setup(){
   createGUI();
@@ -14,6 +15,7 @@ void setup(){
   size(1280,650);
   background(222,163,80);
   clickCount = new ArrayList<PVector>();
+  Menu coffee;
 }
 
 void draw(){

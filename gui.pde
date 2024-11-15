@@ -29,6 +29,22 @@ public void button3_click1(GButton source, GEvent event) { //_CODE_:button3:8810
   //numClicks ++ ; 
 } //_CODE_:button3:881086:
 
+public void Menu1_click1(GButton source, GEvent event) { //_CODE_:Menu1:835275:
+  coffee = new Menu("black");
+  println("<black> chosen.");
+  Menu.drawMenu();
+} //_CODE_:Menu1:835275:
+
+public void Menu2_click1(GButton source, GEvent event) { //_CODE_:Menu2:897158:
+  coffee = new Menu("cafe au lait");
+  println("<cafe au lait> chosen.");
+} //_CODE_:Menu2:897158:
+
+public void Menu3_click1(GButton source, GEvent event) { //_CODE_:Menu3:932059:
+  coffee = new Menu("espresso");
+  println("<espresso> chosen.");
+} //_CODE_:Menu3:932059:
+
 
 
 // Create all the GUI controls. 
@@ -47,6 +63,18 @@ public void createGUI(){
   button3 = new GButton(this, 1066, 367, 140, 100);
   button3.setText("ADD ESPRESSO");
   button3.addEventHandler(this, "button3_click1");
+  Menu1 = new GButton(this, 139, 499, 140, 100);
+  Menu1.setText("BLACK");
+  Menu1.setLocalColorScheme(GCScheme.GOLD_SCHEME);
+  Menu1.addEventHandler(this, "Menu1_click1");
+  Menu2 = new GButton(this, 496, 498, 140, 100);
+  Menu2.setText("CAFE AU LAIT");
+  Menu2.setLocalColorScheme(GCScheme.GOLD_SCHEME);
+  Menu2.addEventHandler(this, "Menu2_click1");
+  Menu3 = new GButton(this, 905, 499, 140, 100);
+  Menu3.setText("ESPRESSO");
+  Menu3.setLocalColorScheme(GCScheme.GOLD_SCHEME);
+  Menu3.addEventHandler(this, "Menu3_click1");
 }
 
 // Variable declarations 
@@ -54,3 +82,6 @@ public void createGUI(){
 GButton button1; 
 GButton button2; 
 GButton button3; 
+GButton Menu1; 
+GButton Menu2; 
+GButton Menu3; 
