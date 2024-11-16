@@ -15,7 +15,6 @@ void setup(){
   size(1280,650);
   background(222,163,80);
   clickCount = new ArrayList<PVector>();
-  Menu coffee;
 }
 
 void draw(){
@@ -23,7 +22,7 @@ void draw(){
   pushStyle();
   
   drawCup();
-  
+    
   popStyle();
   
   float IngredientX = 500; 

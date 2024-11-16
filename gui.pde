@@ -32,16 +32,18 @@ public void button3_click1(GButton source, GEvent event) { //_CODE_:button3:8810
 public void Menu1_click1(GButton source, GEvent event) { //_CODE_:Menu1:835275:
   coffee = new Menu("black");
   println("<black> chosen.");
-  Menu.drawMenu();
+  coffee.drawMenu();
 } //_CODE_:Menu1:835275:
 
 public void Menu2_click1(GButton source, GEvent event) { //_CODE_:Menu2:897158:
   coffee = new Menu("cafe au lait");
+  coffee.drawMenu();
   println("<cafe au lait> chosen.");
 } //_CODE_:Menu2:897158:
 
 public void Menu3_click1(GButton source, GEvent event) { //_CODE_:Menu3:932059:
   coffee = new Menu("espresso");
+  coffee.drawMenu();
   println("<espresso> chosen.");
 } //_CODE_:Menu3:932059:
 

@@ -38,33 +38,30 @@ class Menu{
     esp = "Espresso Shots: ";
     milk = "Milk Amount: ";
     bc = "Brewed Coffee Amount: ";
+    fill(139,110,70);
     rect(0,0,350,650); //menu background
+    
+    //Recipe title
+    textSize(30);
+    fill(77,53,29);
+    text("RECIPE", 50, 100);
+    
+    textSize(25);
+    fill(0);
     if (this.cofType == "black"){ //if statements for each menus
-      textSize(50);
       text(esp+"0", 50, 150); 
-      fill(0);
       text(milk+"0", 50, 300); 
-      fill(0);
-      text(bc+"0", 50, 450); 
-      fill(0);
+      text(bc+"3", 50, 450); 
     }
-    else if (this.cofType == "Cafe au lait"){
-      textSize(50);
+    else if (this.cofType == "cafe au lait"){
       text(esp+"1", 50, 150); 
-      fill(0);
       text(milk+"2", 50, 300); 
-      fill(0);
       text(bc+"0", 50, 450); 
-      fill(0);
     }
-    else if (this.cofType == "espresso"){
-      textSize(50);
+    else if (this.cofType == "espresso"){ 
       text(esp+"3", 50, 150); 
-      fill(0);
       text(milk+"0", 50, 300); 
-      fill(0);
       text(bc+"0", 50, 450); 
-      fill(0);
     }
   }
 }
