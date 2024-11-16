@@ -63,5 +63,6 @@ class Menu{
       text(milk+"0", 50, 300); 
       text(bc+"0", 50, 450); 
     }
+
   }
 }
