@@ -34,12 +34,12 @@ class Menu{
   
   void drawMenu(){
     //establish coordinates
-    String esp, milk, bc;
+    String esp, milk, bc; //texts for the ingredients needed
     esp = "Espresso Shots: ";
     milk = "Milk Amount: ";
     bc = "Brewed Coffee Amount: ";
-    rect(0,0,350,650);
-    if (this.cofType == "black"){
+    rect(0,0,350,650); //menu background
+    if (this.cofType == "black"){ //if statements for each menus
       textSize(50);
       text(esp+"0", 50, 150); 
       fill(0);
