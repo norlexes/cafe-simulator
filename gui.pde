@@ -38,6 +38,11 @@ public void emptyCup(GButton source, GEvent event) { //_CODE_:button4:787928:
   }
 } //_CODE_:button4:787928:
 
+public void start_buttonclick1(GButton source, GEvent event) { //_CODE_:start_button:829370:
+  println("button5 - GButton >> GEvent." + event + " @ " + millis());
+  draw_welcome = false; 
+} //_CODE_:start_button:829370:
+
 
 
 // Create all the GUI controls. 
@@ -56,9 +61,13 @@ public void createGUI(){
   button3 = new GButton(this, 1060, 370, 140, 100);
   button3.setText("ADD ESPRESSO");
   button3.addEventHandler(this, "addE");
-  button4 = new GButton(this, 1060, 520, 140, 90);
+  button4 = new GButton(this, 1062, 508, 140, 90);
   button4.setText("EMPTY CUP");
   button4.addEventHandler(this, "emptyCup");
+  start_button = new GButton(this, 885, 483, 277, 102);
+  start_button.setText("Click here to start!");
+  start_button.setLocalColorScheme(GCScheme.GOLD_SCHEME);
+  start_button.addEventHandler(this, "start_buttonclick1");
 }
 
 // Variable declarations 
@@ -67,3 +76,4 @@ GButton button1;
 GButton button2; 
 GButton button3; 
 GButton button4; 
+GButton start_button; 
