@@ -38,8 +38,8 @@ void drawIngredients(){
       rect(IngredientX, IngredientY, 300, 100); 
     }else if(ingredients.get(i).equals("E")){
       fill(50, 34, 21); 
-      stroke(0, 0, 0);
-      rect(IngredientX, IngredientY, 300, 100); 
+      stroke(0, 0, 0); 
+      rect(IngredientX, IngredientY, 300, 100);
     }
   }  
 }
@@ -58,8 +58,9 @@ void changeScreens(){
     button1.setVisible(false); 
     button2.setVisible(false);
     button3.setVisible(false);
-    button4.setVisible(false);
+    button4.setVisible(false); 
   }
+  
   if(draw_welcome == false){
     background(222,163,80);
     drawCup(); 
@@ -69,6 +70,16 @@ void changeScreens(){
     button4.setVisible(true);
     start_button.setVisible(false); 
     drawIngredients();
+  }
+  
+  if (ingredients.size() > 3){
+    fail = true;
+    tmi = loadImage("failTooManyIngredients.png");
+    button1.setVisible(false);
+    button2.setVisible(false);
+    button3.setVisible(false);
+    button4.setVisible(false);
+    image(tmi,0,0);
   }
   
 }

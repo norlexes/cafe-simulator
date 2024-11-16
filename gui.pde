@@ -15,13 +15,13 @@
  */
 
 public void addC(GButton source, GEvent event) { //_CODE_:button1:674502:
-  println("ADDED COFEE");
+  //println("ADDED COFEE");
   numClicks ++;
   ingredients.add(new String("C"));
 } //_CODE_:button1:674502:
 
 public void addM(GButton source, GEvent event) { //_CODE_:button2:733988:
-  println("ADDED MILK");
+  //println("ADDED MILK");
   numClicks ++ ;
   ingredients.add(new String("M"));
 } //_CODE_:button2:733988:
