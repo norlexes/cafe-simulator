@@ -6,15 +6,16 @@ boolean clickInButtonMilk = false;
 boolean clickInButtonEspresso = false;
 ArrayList<PVector> clickCount; 
 Menu coffee; //variable for the menu
+ArrayList<String> ingredients = new ArrayList<String>();
+int numClicks = 0;
+Boolean fail = false;
+PImage tmi;
+PImage welcome; 
+Boolean draw_welcome = true; 
 
 void setup(){
-  createGUI();
-  background(222,163,80);
   size(1280,650);
   createGUI();
-  size(1280,650);
-  background(222,163,80);
-  clickCount = new ArrayList<PVector>();
 }
 
 void draw(){
@@ -109,4 +110,6 @@ void mousePressed(){
   }
   
   
+
+  changeScreens(); 
 }
