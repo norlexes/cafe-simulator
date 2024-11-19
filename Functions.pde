@@ -51,6 +51,13 @@ void drawWelcomeScreen(){
   image(welcome, 0, 0);
 }
 
+void drawMenuScreen(){
+  size(1280, 650);
+  menuSc = loadImage("Menu Screen.png");
+  menuSc.resize(1280, 650);
+  image(menuSc, 0, 0);
+}
+
 void changeScreens(){
  
   if(draw_welcome == true){
@@ -59,6 +66,9 @@ void changeScreens(){
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
   }
  
   if(draw_welcome == false){
@@ -68,7 +78,10 @@ void changeScreens(){
     button2.setVisible(true);
     button3.setVisible(true);
     button4.setVisible(true);
-    start_button.setVisible(false);
+    Menu1.setVisible(true);
+    Menu2.setVisible(true);
+    Menu3.setVisible(true);
+    button5.setVisible(false);
     drawIngredients();
   }
  
@@ -79,6 +92,12 @@ void changeScreens(){
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
+    draw_Menu1 = false; 
+    draw_Menu2 = false; 
+    draw_Menu3 = false; 
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
     image(tmi,0,0);
   }
   
@@ -87,7 +106,9 @@ void changeScreens(){
     coffee = new Menu("black");
     println("<black> chosen.");
     coffee.drawMenu();
-    Menu1.setVisible(false); 
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
     
   }
   
@@ -103,6 +124,25 @@ void changeScreens(){
       Menu3.setVisible(false);
       image(pass,0,0);
     }
+  if(draw_Menu2 == true){
+   
+    coffee = new Menu("cafe au lait");
+    coffee.drawMenu();
+    println("<cafe au lait> chosen.");
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
+    
+  }
+  
+  if(draw_Menu3 == true){
+   
+    coffee = new Menu("espresso");
+    coffee.drawMenu();
+    println("<espresso> chosen.");
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);    
   }
  
 }

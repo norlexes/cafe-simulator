@@ -1,7 +1,5 @@
 //CAFE SIMULATOR
 
-//CAFE SIMULATOR
-
 import g4p_controls.*;
 ArrayList<String> ingredients = new ArrayList<String>();
 ArrayList<String> blackCoffee = new ArrayList<String>();
@@ -10,7 +8,8 @@ Boolean fail = false;
 PImage tmi;
 PImage pass;
 PImage welcome;
-Boolean draw_welcome = true, draw_Menu1 = false;
+PImage menuSc;
+Boolean draw_welcome = true, draw_Menu1 = false, draw_Menu2 = false, draw_Menu3 = false, start_button = true;
 Menu coffee; //variable for the menu
 
 void setup(){
