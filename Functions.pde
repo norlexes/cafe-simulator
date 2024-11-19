@@ -53,7 +53,9 @@ void drawWelcomeScreen(){
 
 void drawMenuScreen(){
   size(1280, 650);
-  menuSc = loadImage();
+  menuSc = loadImage("Menu Screen.png");
+  menuSc.resize(1280, 650);
+  image(menuSc, 0, 0);
 }
 
 void changeScreens(){
