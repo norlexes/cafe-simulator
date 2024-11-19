@@ -51,6 +51,11 @@ void drawWelcomeScreen(){
   image(welcome, 0, 0);
 }
 
+void drawMenuScreen(){
+  size(1280, 650);
+  
+}
+
 void changeScreens(){
  
   if(draw_welcome == true){
@@ -87,7 +92,6 @@ void changeScreens(){
     coffee = new Menu("black");
     println("<black> chosen.");
     coffee.drawMenu();
-    Menu1.setVisible(false); 
     
   }
  
