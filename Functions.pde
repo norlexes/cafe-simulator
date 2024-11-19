@@ -32,11 +32,13 @@ void drawIngredients(){
       fill(81, 65, 47);
       stroke(0, 0, 0);
       rect(IngredientX, IngredientY, 300, 100);
-    }else if(ingredients.get(i).equals("M")){
+    }
+    else if(ingredients.get(i).equals("M")){
       fill(254, 252, 234);
       stroke(0, 0, 0);
       rect(IngredientX, IngredientY, 300, 100);
-    }else if(ingredients.get(i).equals("E")){
+    }
+    else if(ingredients.get(i).equals("E")){
       fill(50, 34, 21);
       stroke(0, 0, 0);
       rect(IngredientX, IngredientY, 300, 100);
@@ -74,14 +76,15 @@ void changeScreens(){
   if(draw_welcome == false){
     background(222,163,80);
     drawCup();
-    button1.setVisible(true);
-    button2.setVisible(true);
-    button3.setVisible(true);
-    button4.setVisible(true);
+    button1.setVisible(false);
+    button2.setVisible(false);
+    button3.setVisible(false);
+    button4.setVisible(false);
     Menu1.setVisible(true);
     Menu2.setVisible(true);
     Menu3.setVisible(true);
     button5.setVisible(false);
+    drawMenuScreen(); 
     drawIngredients();
   }
  
@@ -102,21 +105,33 @@ void changeScreens(){
   }
   
   if(draw_Menu1 == true){
-   
+    background(222,163,80);
+    drawCup();
+    button1.setVisible(true);
+    button2.setVisible(true);
+    button3.setVisible(true);
+    button4.setVisible(true);
+    drawIngredients(); 
     coffee = new Menu("black");
-    println("<black> chosen.");
+    //println("<black> chosen.");
     coffee.drawMenu();
     Menu1.setVisible(false);
     Menu2.setVisible(false);
-    Menu3.setVisible(false);
+    Menu3.setVisible(false); 
     
   }
   
   if(draw_Menu2 == true){
-   
+    background(222,163,80);
+    drawCup();
+    button1.setVisible(true);
+    button2.setVisible(true);
+    button3.setVisible(true);
+    button4.setVisible(true);
+    drawIngredients(); 
     coffee = new Menu("cafe au lait");
     coffee.drawMenu();
-    println("<cafe au lait> chosen.");
+    //println("<cafe au lait> chosen.");
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false);
@@ -124,10 +139,16 @@ void changeScreens(){
   }
   
   if(draw_Menu3 == true){
-   
+    background(222,163,80);
+    drawCup();
+    button1.setVisible(true);
+    button2.setVisible(true);
+    button3.setVisible(true);
+    button4.setVisible(true);
+    drawIngredients(); 
     coffee = new Menu("espresso");
     coffee.drawMenu();
-    println("<espresso> chosen.");
+    //println("<espresso> chosen.");
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false);    
