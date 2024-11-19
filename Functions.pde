@@ -124,6 +124,7 @@ void changeScreens(){
       Menu3.setVisible(false);
       image(pass,0,0);
     }
+  }
   if(draw_Menu2 == true){
    
     coffee = new Menu("cafe au lait");
