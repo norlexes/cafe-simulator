@@ -87,7 +87,31 @@ void changeScreens(){
     coffee = new Menu("black");
     println("<black> chosen.");
     coffee.drawMenu();
-    Menu1.setVisible(false); 
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
+    
+  }
+  
+  if(draw_Menu2 == true){
+   
+    coffee = new Menu("cafe au lait");
+    coffee.drawMenu();
+    println("<cafe au lait> chosen.");
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
+    
+  }
+  
+  if(draw_Menu3 == true){
+   
+    coffee = new Menu("espresso");
+    coffee.drawMenu();
+    println("<espresso> chosen.");
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
     
   }
  
