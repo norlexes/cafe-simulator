@@ -113,7 +113,7 @@ void changeScreens(){
   }
   
   if(ingredients.size() == 3){
-    if(coffee.cofType == "black" && ingredients.equals(blackCoffee)){
+    if(coffee.cofType == "black" && ingredients.equals(blackCoffee)){ //dslfkjslkfjs
       pass = loadImage("successScreen.png");
       button1.setVisible(false);
       button2.setVisible(false);
@@ -125,6 +125,7 @@ void changeScreens(){
       image(pass,0,0);
     }
   }
+  
   if(draw_Menu2 == true){
    
     coffee = new Menu("cafe au lait");
