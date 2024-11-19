@@ -59,6 +59,9 @@ void changeScreens(){
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
   }
  
   if(draw_welcome == false){
@@ -68,6 +71,9 @@ void changeScreens(){
     button2.setVisible(true);
     button3.setVisible(true);
     button4.setVisible(true);
+    Menu1.setVisible(true);
+    Menu2.setVisible(true);
+    Menu3.setVisible(true);
     start_button.setVisible(false);
     drawIngredients();
   }
@@ -79,6 +85,12 @@ void changeScreens(){
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
+    draw_Menu1 = false; 
+    draw_Menu2 = false; 
+    draw_Menu3 = false; 
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
     image(tmi,0,0);
   }
   
