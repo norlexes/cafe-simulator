@@ -1,7 +1,5 @@
 //CAFE SIMULATOR
 
-//CAFE SIMULATOR
-
 import g4p_controls.*;
 ArrayList<String> ingredients = new ArrayList<String>();
 int numClicks = 0;
