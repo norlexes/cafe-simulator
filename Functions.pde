@@ -51,10 +51,10 @@ void drawWelcomeScreen(){
   image(welcome, 0, 0);
 }
 
-void drawMenuScreen(){
-  size(1280, 650);
-  menuSc = loadImage();
-}
+//void drawMenuScreen(){
+//  size(1280, 650);
+//  menuSc = loadImage();
+//}
 
 void changeScreens(){
  
@@ -79,7 +79,7 @@ void changeScreens(){
     Menu1.setVisible(true);
     Menu2.setVisible(true);
     Menu3.setVisible(true);
-    start_button.setVisible(false);
+    button5.setVisible(false);
     drawIngredients();
   }
  
