@@ -38,6 +38,8 @@ class Menu{
     esp = "Espresso Shots: ";
     milk = "Milk Amount: ";
     bc = "Brewed Coffee Amount: ";
+    
+
     fill(139,110,70);
     rect(0,0,350,650); //menu background
     
@@ -63,6 +65,7 @@ class Menu{
       text(milk+"0", 50, 300); 
       text(bc+"0", 50, 450); 
     }
-
+    
   }
+  
 }

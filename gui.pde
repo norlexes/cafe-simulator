@@ -33,9 +33,10 @@ public void addE(GButton source, GEvent event) { //_CODE_:button3:881086:
 } //_CODE_:button3:881086:
 
 public void Menu1_click1(GButton source, GEvent event) { //_CODE_:Menu1:835275:
-  coffee = new Menu("black");
-  println("<black> chosen.");
-  coffee.drawMenu();
+  //coffee = new Menu("black");
+  //println("<black> chosen.");
+  //coffee.drawMenu();
+  draw_Menu1 = true; 
 } //_CODE_:Menu1:835275:
 
 public void Menu2_click1(GButton source, GEvent event) { //_CODE_:Menu2:897158:
