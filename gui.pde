@@ -59,6 +59,10 @@ public void slider1_change1(GSlider source, GEvent event) { //_CODE_:timelimit:7
   println("timelimit - GSlider >> GEvent." + event + " @ " + millis());
 } //_CODE_:timelimit:713677:
 
+public void textfield1_change1(GTextField source, GEvent event) { //_CODE_:textfield1:591192:
+  println("textfield1 - GTextField >> GEvent." + event + " @ " + millis());
+} //_CODE_:textfield1:591192:
+
 
 
 // Create all the GUI controls. 
@@ -100,7 +104,7 @@ public void createGUI(){
   button5.setText("Click here to start!");
   button5.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   button5.addEventHandler(this, "button5_click1");
-  timelimit = new GSlider(this, 590, 200, 100, 40, 10.0);
+  timelimit = new GSlider(this, 490, 300, 300, 100, 10.0);
   timelimit.setShowValue(true);
   timelimit.setShowLimits(true);
   timelimit.setLimits(60, 30, 90);
@@ -109,6 +113,12 @@ public void createGUI(){
   timelimit.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   timelimit.setOpaque(false);
   timelimit.addEventHandler(this, "slider1_change1");
+  textfield1 = new GTextField(this, 515, 309, 250, 30, G4P.SCROLLBARS_NONE);
+  textfield1.setText("Set your time limit (seconds)");
+  textfield1.setPromptText("Set your time limit (seconds)");
+  textfield1.setLocalColorScheme(GCScheme.ORANGE_SCHEME);
+  textfield1.setOpaque(true);
+  textfield1.addEventHandler(this, "textfield1_change1");
 }
 
 // Variable declarations 
@@ -122,3 +132,4 @@ GButton Menu3;
 GButton button4; 
 GButton button5; 
 GSlider timelimit; 
+GTextField textfield1; 
