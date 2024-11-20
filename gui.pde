@@ -55,6 +55,10 @@ public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:3688
   draw_welcome = false; 
 } //_CODE_:button5:368824:
 
+public void slider1_change1(GSlider source, GEvent event) { //_CODE_:timelimit:713677:
+  println("timelimit - GSlider >> GEvent." + event + " @ " + millis());
+} //_CODE_:timelimit:713677:
+
 
 
 // Create all the GUI controls. 
@@ -76,15 +80,15 @@ public void createGUI(){
   button3.setText("ADD ESPRESSO");
   button3.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   button3.addEventHandler(this, "button3_click1");
-  Menu1 = new GButton(this, 139, 499, 140, 100);
+  Menu1 = new GButton(this, 200, 500, 140, 100);
   Menu1.setText("BLACK");
   Menu1.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   Menu1.addEventHandler(this, "Menu1_click1");
-  Menu2 = new GButton(this, 496, 498, 140, 100);
+  Menu2 = new GButton(this, 570, 500, 140, 100);
   Menu2.setText("CAFE AU LAIT");
   Menu2.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   Menu2.addEventHandler(this, "Menu2_click1");
-  Menu3 = new GButton(this, 905, 499, 140, 100);
+  Menu3 = new GButton(this, 910, 500, 140, 100);
   Menu3.setText("ESPRESSO");
   Menu3.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   Menu3.addEventHandler(this, "Menu3_click1");
@@ -96,6 +100,15 @@ public void createGUI(){
   button5.setText("Click here to start!");
   button5.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   button5.addEventHandler(this, "button5_click1");
+  timelimit = new GSlider(this, 590, 200, 100, 40, 10.0);
+  timelimit.setShowValue(true);
+  timelimit.setShowLimits(true);
+  timelimit.setLimits(60, 30, 90);
+  timelimit.setShowTicks(true);
+  timelimit.setNumberFormat(G4P.INTEGER, 0);
+  timelimit.setLocalColorScheme(GCScheme.GOLD_SCHEME);
+  timelimit.setOpaque(false);
+  timelimit.addEventHandler(this, "slider1_change1");
 }
 
 // Variable declarations 
@@ -108,3 +121,4 @@ GButton Menu2;
 GButton Menu3; 
 GButton button4; 
 GButton button5; 
+GSlider timelimit; 
