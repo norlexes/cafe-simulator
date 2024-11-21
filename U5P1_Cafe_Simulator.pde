@@ -11,6 +11,7 @@ PImage tmi;
 PImage pass;
 PImage welcome;
 PImage menuSc;
+//booleans which define which screen to draw
 Boolean draw_welcome = true, draw_Menu1 = false, draw_Menu2 = false; 
 Boolean draw_Menu3 = false, start_button = true, enter_name = false;
 Menu coffee; //variable for the menu
