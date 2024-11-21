@@ -24,6 +24,7 @@ void drawCup(){
 }
 
 void fillArray(){
+  //fill recipe arrays with ingredients in the correct order
   blackCoffee.add("C");
   blackCoffee.add("C");
   blackCoffee.add("C");
@@ -36,8 +37,10 @@ void fillArray(){
 }
 
 void drawIngredients(){
+  //create x and y variables with starting values
   float IngredientX = 500;
   float IngredientY = 500;
+  
   for (int i = 0; i < ingredients.size(); i++){
     IngredientY -= 100;
     if(ingredients.get(i).equals("C")){
@@ -101,7 +104,6 @@ void changeScreens(){
   }
  
   if (ingredients.size() > 3){
-    fail = true;
     tmi = loadImage("failTooManyIngredients.png");
     button1.setVisible(false);
     button2.setVisible(false);
