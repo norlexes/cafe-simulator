@@ -3,6 +3,7 @@
 import g4p_controls.*;
 ArrayList<String> ingredients = new ArrayList<String>();
 ArrayList<String> blackCoffee = new ArrayList<String>();
+ArrayList<String> cafeAuLait = new ArrayList<String>();
 int numClicks = 0;
 Boolean fail = false;
 PImage tmi;
@@ -18,6 +19,9 @@ void setup(){
   blackCoffee.add("C");
   blackCoffee.add("C");
   blackCoffee.add("C");
+  cafeAuLait.add("E");
+  cafeAuLait.add("M");
+  cafeAuLait.add("M");
   println(blackCoffee);
 }
 

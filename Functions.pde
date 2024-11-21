@@ -123,20 +123,6 @@ void changeScreens(){
     
   }
   
-  if(ingredients.size() == 3){
-    if(coffee.cofType == "black" && ingredients.equals(blackCoffee)){ //dslfkjslkfjs
-      pass = loadImage("successScreen.png");
-      button1.setVisible(false);
-      button2.setVisible(false);
-      button3.setVisible(false);
-      button4.setVisible(false);
-      Menu1.setVisible(false);
-      Menu2.setVisible(false);
-      Menu3.setVisible(false);
-      image(pass,0,0);
-    }
-  }
-  
   if(draw_Menu2 == true){
     background(222,163,80);
     drawCup();
@@ -170,4 +156,29 @@ void changeScreens(){
     Menu3.setVisible(false);    
   }
  
+  if(ingredients.size() == 3){
+    if(coffee.cofType == "black" && ingredients.equals(blackCoffee)){ 
+      pass = loadImage("successScreen.png");
+      button1.setVisible(false);
+      button2.setVisible(false);
+      button3.setVisible(false);
+      button4.setVisible(false);
+      Menu1.setVisible(false);
+      Menu2.setVisible(false);
+      Menu3.setVisible(false);
+      image(pass,0,0);
+    }
+    
+    if(coffee.cofType == "cafe au lait" && ingredients.equals(cafeAuLait)){
+      pass = loadImage("successScreen.png");
+      button1.setVisible(false);
+      button2.setVisible(false);
+      button3.setVisible(false);
+      button4.setVisible(false);
+      Menu1.setVisible(false);
+      Menu2.setVisible(false);
+      Menu3.setVisible(false);
+      image(pass,0,0);
+    }
+  }
 }
