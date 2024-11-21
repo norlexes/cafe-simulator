@@ -83,6 +83,7 @@ void changeScreens(){
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false);
+    Menu.setVisible(false);
   }
  
   if(draw_welcome == false){
@@ -95,6 +96,7 @@ void changeScreens(){
     Menu1.setVisible(true);
     Menu2.setVisible(true);
     Menu3.setVisible(true);
+    Menu.setVisible(true);
     button5.setVisible(false);
     drawMenuScreen(); 
     drawIngredients();
@@ -113,6 +115,7 @@ void changeScreens(){
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false);
+    Menu.setVisible(false);
     image(tmi,0,0);
   }
   
@@ -130,6 +133,7 @@ void changeScreens(){
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false); 
+    Menu.setVisible(false);
     
   }
   
@@ -147,6 +151,7 @@ void changeScreens(){
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false);
+    Menu.setVisible(false);
     
   }
   
@@ -163,7 +168,8 @@ void changeScreens(){
     //println("<espresso> chosen.");
     Menu1.setVisible(false);
     Menu2.setVisible(false);
-    Menu3.setVisible(false);    
+    Menu3.setVisible(false);  
+    Menu.setVisible(false);    
   }
  
   if(ingredients.size() == 3){
@@ -190,5 +196,6 @@ void win(){
       Menu1.setVisible(false);
       Menu2.setVisible(false);
       Menu3.setVisible(false);
+      Menu.setVisible(false);
       image(pass,0,0);
 }
