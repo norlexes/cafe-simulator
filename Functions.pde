@@ -68,7 +68,6 @@ void changeScreens(){
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
-    button6.setVisible(false); 
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false);
@@ -81,7 +80,6 @@ void changeScreens(){
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
-    button6.setVisible(true); 
     Menu1.setVisible(true);
     Menu2.setVisible(true);
     Menu3.setVisible(true);
