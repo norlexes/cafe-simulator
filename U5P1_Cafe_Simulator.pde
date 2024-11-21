@@ -4,6 +4,7 @@ import g4p_controls.*;
 ArrayList<String> ingredients = new ArrayList<String>();
 ArrayList<String> blackCoffee = new ArrayList<String>();
 ArrayList<String> cafeAuLait = new ArrayList<String>();
+ArrayList<String> espresso = new ArrayList<String>();
 int numClicks = 0;
 Boolean fail = false;
 PImage tmi;
@@ -17,13 +18,7 @@ Menu coffee; //variable for the menu
 void setup(){
   size(1280,650);
   createGUI();
-  blackCoffee.add("C");
-  blackCoffee.add("C");
-  blackCoffee.add("C");
-  cafeAuLait.add("E");
-  cafeAuLait.add("M");
-  cafeAuLait.add("M");
-  println(blackCoffee);
+  fillArray();
 }
 
 void draw(){
