@@ -83,9 +83,11 @@ void changeScreens(){
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
+    //button6.setVisible(false); 
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false);
+    entername.setVisible(false);
   }
  
   if(draw_welcome == false){
@@ -95,10 +97,12 @@ void changeScreens(){
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
+    //button6.setVisible(true); 
     Menu1.setVisible(true);
     Menu2.setVisible(true);
     Menu3.setVisible(true);
     button5.setVisible(false);
+    entername.setVisible(true);
     drawMenuScreen(); 
     drawIngredients();
   }
@@ -121,68 +125,86 @@ void changeScreens(){
   if(draw_Menu1 == true){
     background(222,163,80);
     drawCup();
-    menuSettings();
+    button1.setVisible(true);
+    button2.setVisible(true);
+    button3.setVisible(true);
+    button4.setVisible(true);
     drawIngredients(); 
     coffee = new Menu("black");
     //println("<black> chosen.");
     coffee.drawMenu();
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    entername.setVisible(false);
+    Menu3.setVisible(false); 
     
   }
   
   if(draw_Menu2 == true){
     background(222,163,80);
     drawCup();
-    menuSettings();
+    button1.setVisible(true);
+    button2.setVisible(true);
+    button3.setVisible(true);
+    button4.setVisible(true);
     drawIngredients(); 
     coffee = new Menu("cafe au lait");
     coffee.drawMenu();
     //println("<cafe au lait> chosen.");
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false);
+    entername.setVisible(false);
     
   }
   
   if(draw_Menu3 == true){
     background(222,163,80);
     drawCup();
-    menuSettings();
+    button1.setVisible(true);
+    button2.setVisible(true);
+    button3.setVisible(true);
+    button4.setVisible(true);
     drawIngredients(); 
     coffee = new Menu("espresso");
     coffee.drawMenu();
-    //println("<espresso> chosen.");  
+    //println("<espresso> chosen.");
+    Menu1.setVisible(false);
+    Menu2.setVisible(false);
+    Menu3.setVisible(false); 
+    entername.setVisible(false);
+    
+  }
+  
+  if(enter_name == false){
+    entername.setVisible(false); 
   }
  
   if(ingredients.size() == 3){
     if(coffee.cofType == "black" && ingredients.equals(blackCoffee)){ 
-      win();
+      pass = loadImage("successScreen.png");
+      button1.setVisible(false);
+      button2.setVisible(false);
+      button3.setVisible(false);
+      button4.setVisible(false);
+      Menu1.setVisible(false);
+      Menu2.setVisible(false);
+      Menu3.setVisible(false);
+      entername.setVisible(false);
+      image(pass,0,0);
     }
     
     if(coffee.cofType == "cafe au lait" && ingredients.equals(cafeAuLait)){
-      win();
-    }
-    
-    if(coffee.cofType == "espresso" && ingredients.equals(espresso)){
-      win();
+      pass = loadImage("successScreen.png");
+      button1.setVisible(false);
+      button2.setVisible(false);
+      button3.setVisible(false);
+      button4.setVisible(false);
+      Menu1.setVisible(false);
+      Menu2.setVisible(false);
+      Menu3.setVisible(false);
+      entername.setVisible(false);
+      image(pass,0,0);
     }
   }
-}
-
-void win(){
-  pass = loadImage("successScreen.png");
-  button1.setVisible(false);
-  button2.setVisible(false);
-  button3.setVisible(false);
-  button4.setVisible(false);
-  Menu1.setVisible(false);
-  Menu2.setVisible(false);
-  Menu3.setVisible(false);
-  image(pass,0,0);
-}
-
-void menuSettings(){
-  button1.setVisible(true);
-  button2.setVisible(true);
-  button3.setVisible(true);
-  button4.setVisible(true);
-  Menu1.setVisible(false);
-  Menu2.setVisible(false);
-  Menu3.setVisible(false); 
 }

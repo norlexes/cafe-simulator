@@ -49,12 +49,13 @@ public void button4_click1(GButton source, GEvent event) { //_CODE_:button4:5576
 } //_CODE_:button4:557600:
 
 public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:368824:
-  draw_welcome = false; 
+  draw_welcome = false;
+  enter_name = true;
 } //_CODE_:button5:368824:
 
-public void dropList1_click1(GDropList source, GEvent event) { //_CODE_:dropList1:853666:
-  println("dropList1 - GDropList >> GEvent." + event + " @ " + millis());
-} //_CODE_:dropList1:853666:
+public void textfield1_change1(GTextField source, GEvent event) { //_CODE_:entername:224713:
+
+} //_CODE_:entername:224713:
 
 
 
@@ -97,9 +98,11 @@ public void createGUI(){
   button5.setText("Click here to start!");
   button5.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   button5.addEventHandler(this, "button5_click1");
-  dropList1 = new GDropList(this, 442, 397, 90, 80, 3, 10);
-  dropList1.setItems(loadStrings("list_853666"), 0);
-  dropList1.addEventHandler(this, "dropList1_click1");
+  entername = new GTextField(this, 552, 184, 177, 16, G4P.SCROLLBARS_NONE);
+  entername.setPromptText("Enter your name");
+  entername.setLocalColorScheme(GCScheme.GOLD_SCHEME);
+  entername.setOpaque(true);
+  entername.addEventHandler(this, "textfield1_change1");
 }
 
 // Variable declarations 
@@ -112,4 +115,4 @@ GButton Menu2;
 GButton Menu3; 
 GButton button4; 
 GButton button5; 
-GDropList dropList1; 
+GTextField entername; 
