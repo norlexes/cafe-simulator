@@ -119,51 +119,33 @@ void changeScreens(){
   if(draw_Menu1 == true){
     background(222,163,80);
     drawCup();
-    button1.setVisible(true);
-    button2.setVisible(true);
-    button3.setVisible(true);
-    button4.setVisible(true);
+    menuSettings();
     drawIngredients(); 
     coffee = new Menu("black");
     //println("<black> chosen.");
     coffee.drawMenu();
-    Menu1.setVisible(false);
-    Menu2.setVisible(false);
-    Menu3.setVisible(false); 
     
   }
   
   if(draw_Menu2 == true){
     background(222,163,80);
     drawCup();
-    button1.setVisible(true);
-    button2.setVisible(true);
-    button3.setVisible(true);
-    button4.setVisible(true);
+    menuSettings();
     drawIngredients(); 
     coffee = new Menu("cafe au lait");
     coffee.drawMenu();
     //println("<cafe au lait> chosen.");
-    Menu1.setVisible(false);
-    Menu2.setVisible(false);
-    Menu3.setVisible(false);
     
   }
   
   if(draw_Menu3 == true){
     background(222,163,80);
     drawCup();
-    button1.setVisible(true);
-    button2.setVisible(true);
-    button3.setVisible(true);
-    button4.setVisible(true);
+    menuSettings();
     drawIngredients(); 
     coffee = new Menu("espresso");
     coffee.drawMenu();
-    //println("<espresso> chosen.");
-    Menu1.setVisible(false);
-    Menu2.setVisible(false);
-    Menu3.setVisible(false);    
+    //println("<espresso> chosen.");  
   }
  
   if(ingredients.size() == 3){
@@ -183,12 +165,22 @@ void changeScreens(){
 
 void win(){
   pass = loadImage("successScreen.png");
-      button1.setVisible(false);
-      button2.setVisible(false);
-      button3.setVisible(false);
-      button4.setVisible(false);
-      Menu1.setVisible(false);
-      Menu2.setVisible(false);
-      Menu3.setVisible(false);
-      image(pass,0,0);
+  button1.setVisible(false);
+  button2.setVisible(false);
+  button3.setVisible(false);
+  button4.setVisible(false);
+  Menu1.setVisible(false);
+  Menu2.setVisible(false);
+  Menu3.setVisible(false);
+  image(pass,0,0);
+}
+
+void menuSettings(){
+  button1.setVisible(true);
+  button2.setVisible(true);
+  button3.setVisible(true);
+  button4.setVisible(true);
+  Menu1.setVisible(false);
+  Menu2.setVisible(false);
+  Menu3.setVisible(false); 
 }
