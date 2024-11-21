@@ -52,8 +52,13 @@ public void button4_click1(GButton source, GEvent event) { //_CODE_:button4:5576
 } //_CODE_:button4:557600:
 
 public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:368824:
-  draw_welcome = false; 
+  draw_welcome = false;
+  enter_name = true;
 } //_CODE_:button5:368824:
+
+public void textfield1_change1(GTextField source, GEvent event) { //_CODE_:entername:224713:
+
+} //_CODE_:entername:224713:
 
 
 
@@ -96,6 +101,11 @@ public void createGUI(){
   button5.setText("Click here to start!");
   button5.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   button5.addEventHandler(this, "button5_click1");
+  entername = new GTextField(this, 552, 184, 177, 16, G4P.SCROLLBARS_NONE);
+  entername.setPromptText("Enter your name");
+  entername.setLocalColorScheme(GCScheme.GOLD_SCHEME);
+  entername.setOpaque(true);
+  entername.addEventHandler(this, "textfield1_change1");
 }
 
 // Variable declarations 
@@ -108,3 +118,4 @@ GButton Menu2;
 GButton Menu3; 
 GButton button4; 
 GButton button5; 
+GTextField entername; 
