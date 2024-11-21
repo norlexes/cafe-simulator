@@ -23,6 +23,18 @@ void drawCup(){
   popStyle();
 }
 
+void fillArray(){
+  blackCoffee.add("C");
+  blackCoffee.add("C");
+  blackCoffee.add("C");
+  cafeAuLait.add("E");
+  cafeAuLait.add("M");
+  cafeAuLait.add("M");
+  espresso.add("E");
+  espresso.add("E");
+  espresso.add("E");
+}
+
 void drawIngredients(){
   float IngredientX = 500;
   float IngredientY = 500;
@@ -156,19 +168,21 @@ void changeScreens(){
  
   if(ingredients.size() == 3){
     if(coffee.cofType == "black" && ingredients.equals(blackCoffee)){ 
-      pass = loadImage("successScreen.png");
-      button1.setVisible(false);
-      button2.setVisible(false);
-      button3.setVisible(false);
-      button4.setVisible(false);
-      Menu1.setVisible(false);
-      Menu2.setVisible(false);
-      Menu3.setVisible(false);
-      image(pass,0,0);
+      win();
     }
     
     if(coffee.cofType == "cafe au lait" && ingredients.equals(cafeAuLait)){
-      pass = loadImage("successScreen.png");
+      win();
+    }
+    
+    if(coffee.cofType == "espresso" && ingredients.equals(espresso)){
+      win();
+    }
+  }
+}
+
+void win(){
+  pass = loadImage("successScreen.png");
       button1.setVisible(false);
       button2.setVisible(false);
       button3.setVisible(false);
@@ -177,6 +191,4 @@ void changeScreens(){
       Menu2.setVisible(false);
       Menu3.setVisible(false);
       image(pass,0,0);
-    }
-  }
 }
