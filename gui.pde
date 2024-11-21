@@ -55,9 +55,9 @@ public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:3688
   draw_welcome = false; 
 } //_CODE_:button5:368824:
 
-public void button6_click1(GButton source, GEvent event) { //_CODE_:button6:752375:
+public void button6_click1(GButton source, GEvent event) { //_CODE_:button6:836781:
   println("button6 - GButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:button6:752375:
+} //_CODE_:button6:836781:
 
 
 
@@ -100,9 +100,8 @@ public void createGUI(){
   button5.setText("Click here to start!");
   button5.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   button5.addEventHandler(this, "button5_click1");
-  button6 = new GButton(this, 24, 18, 140, 54);
-  button6.setText("Back");
-  button6.setLocalColorScheme(GCScheme.GOLD_SCHEME);
+  button6 = new GButton(this, 752, 221, 267, 99);
+  button6.setText("Try Again?");
   button6.addEventHandler(this, "button6_click1");
 }
 
