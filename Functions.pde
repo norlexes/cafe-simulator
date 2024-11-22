@@ -167,7 +167,7 @@ void changeScreens(){
     //render background and cup
     background(222,163,80);
     drawCup();
-    change button visibility 
+    //change button visibility 
     menuSettings();
     //render ingredients 
     drawIngredients(); 
