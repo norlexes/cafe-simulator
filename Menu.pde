@@ -43,10 +43,10 @@ class Menu{
     fill(139,110,70);
     rect(0,0,350,650); //menu background
     
-    //Recipe title
+    //Menu title
     textSize(30);
     fill(77,53,29);
-    text("RECIPE", 50, 100);
+    text("MENU", 50, 100);
     
     textSize(25);
     fill(0);
