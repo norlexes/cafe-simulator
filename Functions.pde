@@ -148,11 +148,14 @@ void changeScreens(){
   }
   
   if(draw_Menu2 == true){
-    //
+    //render background and cup
     background(222,163,80);
     drawCup();
+    //change button visibility
     menuSettings();
+    //render ingredients
     drawIngredients(); 
+    //define and render menu object
     coffee = new Menu("cafe au lait");
     coffee.drawMenu();
     //println("<cafe au lait> chosen.");
@@ -161,10 +164,14 @@ void changeScreens(){
   }
   
   if(draw_Menu3 == true){
+    //render background and cup
     background(222,163,80);
     drawCup();
+    change button visibility 
     menuSettings();
+    //render ingredients 
     drawIngredients(); 
+    //define and render menu variable
     coffee = new Menu("espresso");
     coffee.drawMenu();
     Menu.setVisible(false);    
@@ -172,18 +179,22 @@ void changeScreens(){
   }
   
   if(enter_name == false){
+    //hide submit box when not in use
     entername.setVisible(false); 
   }
  
   if(ingredients.size() == 3){
+    //win scenerio for black coffee menu
     if(coffee.cofType == "black" && ingredients.equals(blackCoffee)){ 
       win();
     }
-    
+
+    //win scenerio for cafe au lait menu
     if(coffee.cofType == "cafe au lait" && ingredients.equals(cafeAuLait)){
       win();
     }
-    
+
+    //win scenario for espresso menu
     if(coffee.cofType == "espresso" && ingredients.equals(espresso)){
       win();
     }
@@ -201,13 +212,15 @@ void menuSettings(){
 }
 
 void win(){
+  //load success image
   pass = loadImage("successScreen.png");
-      button1.setVisible(false);
-      button2.setVisible(false);
-      button3.setVisible(false);
-      button4.setVisible(false);
-      Menu.setVisible(false);
-      image(pass,0,0);
+  //hide buttons and render image
+  button1.setVisible(false);
+  button2.setVisible(false);
+  button3.setVisible(false);
+  button4.setVisible(false);
+  Menu.setVisible(false);
+  image(pass,0,0);
   button1.setVisible(false);
   button2.setVisible(false);
   button3.setVisible(false);
