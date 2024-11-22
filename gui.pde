@@ -29,18 +29,6 @@ public void button3_click1(GButton source, GEvent event) { //_CODE_:button3:8810
   ingredients.add(new String("E"));
 } //_CODE_:button3:881086:
 
-public void Menu1_click1(GButton source, GEvent event) { //_CODE_:Menu1:835275:
-  draw_Menu1 = true; 
-} //_CODE_:Menu1:835275:
-
-public void Menu2_click1(GButton source, GEvent event) { //_CODE_:Menu2:897158:
-  draw_Menu2 = true; 
-} //_CODE_:Menu2:897158:
-
-public void Menu3_click1(GButton source, GEvent event) { //_CODE_:Menu3:932059:
-  draw_Menu3 = true; 
-} //_CODE_:Menu3:932059:
-
 public void button4_click1(GButton source, GEvent event) { //_CODE_:button4:557600:
   println("button4 - GButton >> GEvent." + event + " @ " + millis());
   for (int i = ingredients.size() - 1; i >= 0; i--) {
@@ -54,21 +42,25 @@ public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:3688
 } //_CODE_:button5:368824:
 
 public void menu_chosen(GDropList source, GEvent event) { //_CODE_:Menu:853666:
-  coffee.cofType = Menu.getSelectedText();
+  String c = Menu.getSelectedText();
 
-  if (coffee.cofType.equals ("black")) {
+  if (c.equals ("black")) {
     draw_Menu1 = true;
   }
   
-  if (coffee.cofType.equals ("cafe au lait")) {
+  if (c.equals ("cafe au lait")) {
     draw_Menu2 = true;  
     
   }
-  if (coffee.cofType.equals ("espresso")) {
+  if (c.equals ("espresso")) {
     draw_Menu3 = true;  
     
   }
 } //_CODE_:Menu:853666:
+
+public void textfield1_change1(GTextField source, GEvent event) { //_CODE_:entername:360784:
+  
+} //_CODE_:entername:360784:
 
 
 
@@ -91,18 +83,6 @@ public void createGUI(){
   button3.setText("ADD ESPRESSO");
   button3.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   button3.addEventHandler(this, "button3_click1");
-  Menu1 = new GButton(this, 200, 500, 140, 100);
-  Menu1.setText("BLACK");
-  Menu1.setLocalColorScheme(GCScheme.GOLD_SCHEME);
-  Menu1.addEventHandler(this, "Menu1_click1");
-  Menu2 = new GButton(this, 570, 500, 140, 100);
-  Menu2.setText("CAFE AU LAIT");
-  Menu2.setLocalColorScheme(GCScheme.GOLD_SCHEME);
-  Menu2.addEventHandler(this, "Menu2_click1");
-  Menu3 = new GButton(this, 910, 500, 140, 100);
-  Menu3.setText("ESPRESSO");
-  Menu3.setLocalColorScheme(GCScheme.GOLD_SCHEME);
-  Menu3.addEventHandler(this, "Menu3_click1");
   button4 = new GButton(this, 1063, 501, 140, 100);
   button4.setText("EMPTY CUP");
   button4.setLocalColorScheme(GCScheme.GOLD_SCHEME);
@@ -111,9 +91,15 @@ public void createGUI(){
   button5.setText("Click here to start!");
   button5.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   button5.addEventHandler(this, "button5_click1");
-  Menu = new GDropList(this, 442, 397, 90, 80, 3, 10);
+  Menu = new GDropList(this, 525, 405, 230, 160, 3, 10);
   Menu.setItems(loadStrings("list_853666"), 0);
+  Menu.setLocalColorScheme(GCScheme.ORANGE_SCHEME);
   Menu.addEventHandler(this, "menu_chosen");
+  entername = new GTextField(this, 580, 356, 120, 30, G4P.SCROLLBARS_NONE);
+  entername.setText("enter your name");
+  entername.setLocalColorScheme(GCScheme.ORANGE_SCHEME);
+  entername.setOpaque(true);
+  entername.addEventHandler(this, "textfield1_change1");
 }
 
 // Variable declarations 
@@ -121,9 +107,7 @@ public void createGUI(){
 GButton button1; 
 GButton button2; 
 GButton button3; 
-GButton Menu1; 
-GButton Menu2; 
-GButton Menu3; 
 GButton button4; 
 GButton button5; 
 GDropList Menu; 
+GTextField entername; 
