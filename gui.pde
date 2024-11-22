@@ -96,7 +96,7 @@ public void createGUI(){
   Menu.setLocalColorScheme(GCScheme.ORANGE_SCHEME);
   Menu.addEventHandler(this, "menu_chosen");
   entername = new GTextField(this, 580, 356, 120, 30, G4P.SCROLLBARS_NONE);
-  entername.setText("enter your name");
+  entername.setPromptText("enter your name");
   entername.setLocalColorScheme(GCScheme.ORANGE_SCHEME);
   entername.setOpaque(true);
   entername.addEventHandler(this, "textfield1_change1");
