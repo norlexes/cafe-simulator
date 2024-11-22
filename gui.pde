@@ -16,19 +16,16 @@
 
 public void button1_click1(GButton source, GEvent event) { //_CODE_:button1:674502:
   println("ADDED COFEE");
-  numClicks ++;
   ingredients.add(new String("C"));
 } //_CODE_:button1:674502:
 
 public void button2_click1(GButton source, GEvent event) { //_CODE_:button2:733988:
   println("ADDED MILK");
-  numClicks ++ ;
   ingredients.add(new String("M"));
 } //_CODE_:button2:733988:
 
 public void button3_click1(GButton source, GEvent event) { //_CODE_:button3:881086:
   println("button3 - GButton >> GEvent." + event + " @ " + millis());
-  numClicks ++ ;
   ingredients.add(new String("E"));
 } //_CODE_:button3:881086:
 
@@ -52,7 +49,8 @@ public void button4_click1(GButton source, GEvent event) { //_CODE_:button4:5576
 } //_CODE_:button4:557600:
 
 public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:368824:
-  draw_welcome = false; 
+  draw_welcome = false;
+  enter_name = true;
 } //_CODE_:button5:368824:
 
 public void menu_chosen(GDropList source, GEvent event) { //_CODE_:Menu:853666:

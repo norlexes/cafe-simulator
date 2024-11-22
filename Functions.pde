@@ -24,6 +24,7 @@ void drawCup(){
 }
 
 void fillArray(){
+  //fill recipe arrays with ingredients in the correct order
   blackCoffee.add("C");
   blackCoffee.add("C");
   blackCoffee.add("C");
@@ -36,20 +37,27 @@ void fillArray(){
 }
 
 void drawIngredients(){
+  //create x and y variables with starting values
   float IngredientX = 500;
   float IngredientY = 500;
+  
   for (int i = 0; i < ingredients.size(); i++){
+    //move up to draw each subsequent ingredient
     IngredientY -= 100;
+    //Draw a different color bases on what the ingredient is
+    //Brown for brewed coffee
     if(ingredients.get(i).equals("C")){
       fill(81, 65, 47);
       stroke(0, 0, 0);
       rect(IngredientX, IngredientY, 300, 100);
     }
+    //off white for milk
     else if(ingredients.get(i).equals("M")){
       fill(254, 252, 234);
       stroke(0, 0, 0);
       rect(IngredientX, IngredientY, 300, 100);
     }
+    //draker brown for espresso
     else if(ingredients.get(i).equals("E")){
       fill(50, 34, 21);
       stroke(0, 0, 0);
@@ -59,6 +67,7 @@ void drawIngredients(){
 }
 
 void drawWelcomeScreen(){
+  //define screen size, then load and draw pre-rendered welcome screen
   size(1280, 650);
   welcome = loadImage("Welcome screen.png");  
   welcome.resize(1280, 650);
@@ -66,6 +75,7 @@ void drawWelcomeScreen(){
 }
 
 void drawMenuScreen(){
+  //define screen size, then load and draw pre-rendered menu screen
   size(1280, 650);
   menuSc = loadImage("Menu Screen.png");
   menuSc.resize(1280, 650);
@@ -75,36 +85,48 @@ void drawMenuScreen(){
 void changeScreens(){
  
   if(draw_welcome == true){
+    //call the function to load the image
     drawWelcomeScreen();
+    //change visibility of GUI elements
     button1.setVisible(false);
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
+    //button6.setVisible(false); 
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false);
     Menu.setVisible(false);
+    entername.setVisible(false);
   }
  
   if(draw_welcome == false){
+    //define background color
     background(222,163,80);
+    //draw cup
     drawCup();
+    //change visibility of GUI elements
     button1.setVisible(false);
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
+    //button6.setVisible(true); 
     Menu1.setVisible(true);
     Menu2.setVisible(true);
     Menu3.setVisible(true);
     Menu.setVisible(true);
     button5.setVisible(false);
+    entername.setVisible(true);
+    //render menu and ingredients
     drawMenuScreen(); 
     drawIngredients();
   }
  
   if (ingredients.size() > 3){
-    fail = true;
+    //function if too many ingredients are added
+    //load fail screen
     tmi = loadImage("failTooManyIngredients.png");
+    //change visibility of GUI elements
     button1.setVisible(false);
     button2.setVisible(false);
     button3.setVisible(false);
@@ -120,30 +142,28 @@ void changeScreens(){
   }
   
   if(draw_Menu1 == true){
+    //draw backrgound and cup
     background(222,163,80);
     drawCup();
-    button1.setVisible(true);
-    button2.setVisible(true);
-    button3.setVisible(true);
-    button4.setVisible(true);
+    //change visibility of GUI elements
+    menuSettings();
+    //draw ingredients and create new variable of menu class
     drawIngredients(); 
     coffee = new Menu("black");
     //println("<black> chosen.");
+    //draw menu element
     coffee.drawMenu();
     Menu1.setVisible(false);
     Menu2.setVisible(false);
     Menu3.setVisible(false); 
-    Menu.setVisible(false);
-    
+    Menu.setVisible(false);    
   }
   
   if(draw_Menu2 == true){
+    //
     background(222,163,80);
     drawCup();
-    button1.setVisible(true);
-    button2.setVisible(true);
-    button3.setVisible(true);
-    button4.setVisible(true);
+    menuSettings();
     drawIngredients(); 
     coffee = new Menu("cafe au lait");
     coffee.drawMenu();
@@ -158,10 +178,7 @@ void changeScreens(){
   if(draw_Menu3 == true){
     background(222,163,80);
     drawCup();
-    button1.setVisible(true);
-    button2.setVisible(true);
-    button3.setVisible(true);
-    button4.setVisible(true);
+    menuSettings();
     drawIngredients(); 
     coffee = new Menu("espresso");
     coffee.drawMenu();
@@ -170,6 +187,11 @@ void changeScreens(){
     Menu2.setVisible(false);
     Menu3.setVisible(false);  
     Menu.setVisible(false);    
+    
+  }
+  
+  if(enter_name == false){
+    entername.setVisible(false); 
   }
  
   if(ingredients.size() == 3){
@@ -187,6 +209,18 @@ void changeScreens(){
   }
 }
 
+void menuSettings(){
+  //change visibility of GUI elements for when menu is drawn
+  button1.setVisible(true);
+  button2.setVisible(true);
+  button3.setVisible(true);
+  button4.setVisible(true);
+  Menu1.setVisible(false);
+  Menu2.setVisible(false);
+  entername.setVisible(false);
+  Menu3.setVisible(false); 
+}
+
 void win(){
   pass = loadImage("successScreen.png");
       button1.setVisible(false);
@@ -198,4 +232,13 @@ void win(){
       Menu3.setVisible(false);
       Menu.setVisible(false);
       image(pass,0,0);
+  button1.setVisible(false);
+  button2.setVisible(false);
+  button3.setVisible(false);
+  button4.setVisible(false);
+  Menu1.setVisible(false);
+  Menu2.setVisible(false);
+  Menu3.setVisible(false);
+  entername.setVisible(false);
+  image(pass,0,0);      
 }
