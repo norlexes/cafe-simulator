@@ -2,7 +2,7 @@
 
 class Menu{
   //FIELDS:
-  String cofType;
+  String cofType; //coffee type from black, cafe au lait, and espresso.
   int espShot, milkNum, brewCofAmt; //espresso shots, amount of milk, amount of brewed coffee
   
   //CONSTRUCTOR
