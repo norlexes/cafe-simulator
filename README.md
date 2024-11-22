@@ -1,5 +1,5 @@
 # cafe-simulator
-Thank you for choosing Cafe Simulator to train yourself or your workers. This simulator will save you millions of HR funds in no time. Firing will not be an option. Choose your best young workers for hire as they will work for your business for as long as they live.
+Thank you for choosing Cafe Simulator to train yourself or your workers. This simulator will save you millions in HR funds in no time. Firing will not be an option. Choose your best young workers for hire as they will work for your business for as long as they live.
 Equipment and Software Requirements
 
 Processing 4
