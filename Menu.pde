@@ -6,11 +6,11 @@ class Menu{
   int espShot, milkNum, brewCofAmt; //espresso shots, amount of milk, amount of brewed coffee
   
   //CONSTRUCTOR
-  Menu(String c){
+  Menu(String c){ //constructor later used in GUI
     this.cofType = c;
   }
   
-  void checkMenu(){
+  void checkMenu(){ //checks the menu whether it's black, cafe au lait, or espresso
     if (this.cofType == "black"){
       this.espShot = 0;
       this.milkNum = 0;
@@ -32,8 +32,8 @@ class Menu{
   }
   
   
-  void drawMenu(){
-    //establish coordinates
+  void drawMenu(){ //draws the menu
+    //establish variables
     String esp, milk, bc; //texts for the ingredients needed
     esp = "Espresso Shots: ";
     milk = "Milk Amount: ";
