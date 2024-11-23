@@ -1,5 +1,6 @@
 //The drawCup() function that draws a cup in a place
 void drawCup(){
+  //Ensuring the cup stays on the screen before ingredients are drawn on it
   pushStyle();
   //Establishing the coordinates for the rectangle
   //part of the cup
@@ -12,14 +13,23 @@ void drawCup(){
   fill(255, 255, 255);
   stroke(255, 255, 255);
   //Drawing the rectangular part of the cup
+  //The last four parameters are radii of the corners (for rounded corners)
+  //The parameters start at the top left corner and go clockwise
   rect(upperLeftX, upperLeftY, cupWidth, cupHeight, 12, 12, 72, 72);
   //Drawing the handle of the cup
+  //noFill is called because the handle drawn will be a circle 
+  //with a thick border and orientation such that it appears as a handle
   noFill();
+  //The colour of the border of the circle
   stroke(255, 255, 255);
+  //The border thickness of the circle
   strokeWeight(40);
+  //The position of the circle relative to the rounded rectangle's coordinates
   float xCupHandle = upperLeftX + 430;
   float yCupHandle = upperLeftY + (cupHeight/2);
+  //Drawing the circle at the coordinates established earlier
   circle(xCupHandle, yCupHandle, 275);
+  //Ensuring the cup stays on the screen after ingredients are drawn on it
   popStyle();
 }
 
@@ -37,27 +47,30 @@ void fillArray(){
 }
 
 void drawIngredients(){
-  //create x and y variables with starting values
+  //Create x and y variables with starting values
   float IngredientX = 500;
   float IngredientY = 500;
   
   for (int i = 0; i < ingredients.size(); i++){
-    //move up to draw each subsequent ingredient
+    //Move up to draw each subsequent ingredient
     IngredientY -= 100;
     //Draw a different color bases on what the ingredient is
-    //Brown for brewed coffee
+    //If the user selects brown coffee, drawn a brown rectangle 
+    //to show that brown coffee has been added
     if(ingredients.get(i).equals("C")){
       fill(81, 65, 47);
       stroke(0, 0, 0);
       rect(IngredientX, IngredientY, 300, 100);
     }
-    //off white for milk
+    //If the user selects milk, drawn an off white rectangle 
+    //to show that milk has been added 
     else if(ingredients.get(i).equals("M")){
       fill(254, 252, 234);
       stroke(0, 0, 0);
       rect(IngredientX, IngredientY, 300, 100);
     }
-    //draker brown for espresso
+    //If the user selects espresso, draw a darker brown rectangle 
+    //to show that espresso has been added 
     else if(ingredients.get(i).equals("E")){
       fill(50, 34, 21);
       stroke(0, 0, 0);
@@ -67,51 +80,53 @@ void drawIngredients(){
 }
 
 void drawWelcomeScreen(){
-  //define screen size, then load and draw pre-rendered welcome screen
+  //Define screen size, then load and draw pre-rendered welcome screen
   size(1280, 650);
   welcome = loadImage("Welcome screen.png");  
+  //Adjusting the size of the welcome screen image to fit the entire screen on the application
   welcome.resize(1280, 650);
   image(welcome, 0, 0);
 }
 
 void drawMenuScreen(){
-  //define screen size, then load and draw pre-rendered menu screen
+  //Define screen size, then load and draw pre-rendered menu screen
   size(1280, 650);
   menuSc = loadImage("Menu Screen.png");
+  //Adjusting the size of the menu screen image to fit the entire screen on the application
   menuSc.resize(1280, 650);
   image(menuSc, 0, 0);
 }
 
+//The function that controls how the screens change 
 void changeScreens(){
  
   if(draw_welcome == true){
-    //call the function to load the image
+    //Call the function to load the image
     drawWelcomeScreen();
-    //change visibility of GUI elements
+    //Change visibility of GUI elements
     button1.setVisible(false);
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
-    //button6.setVisible(false); 
     Menu.setVisible(false);
     entername.setVisible(false);
   }
  
   if(draw_welcome == false){
-    //define background color
+    //Define background color
     background(222,163,80);
-    //draw cup
+    //Calling the drawCup() function so 
+    //that the cup is drawn when the welcome screen is not visible
     drawCup();
-    //change visibility of GUI elements
+    //Change visibility of GUI elements
     button1.setVisible(false);
     button2.setVisible(false);
     button3.setVisible(false);
     button4.setVisible(false);
-    //button6.setVisible(true); 
     Menu.setVisible(true);
     button5.setVisible(false);
     entername.setVisible(true);
-    //render menu and ingredients
+    //Render menu and ingredients
     drawMenuScreen(); 
     drawIngredients();
   }
