@@ -1,8 +1,13 @@
 //CAFE SIMULATOR
 import g4p_controls.*;
-//Arraylist which keeps trcak of added ingredients
+//Arraylist which keeps track of the ingredients added by th user
+//this will be compared to the correct recipies for success case
+//this also activates the fail case if the length of the arraylist gets above 3
 ArrayList<String> ingredients = new ArrayList<String>();
 //ArrayLists which define the recipies for each drink
+//these are populated with one-character values
+//the ingredients string will be compared to one of these
+//depending on which menu is chosen, they will be compared to determine if the drink is correct
 ArrayList<String> blackCoffee = new ArrayList<String>();
 ArrayList<String> cafeAuLait = new ArrayList<String>();
 ArrayList<String> espresso = new ArrayList<String>();
