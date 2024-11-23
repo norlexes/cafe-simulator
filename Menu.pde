@@ -10,26 +10,7 @@ class Menu{
     this.cofType = c;
   }
   
-  void checkMenu(){ //checks the menu whether it's black, cafe au lait, or espresso
-    if (this.cofType == "black"){
-      this.espShot = 0;
-      this.milkNum = 0;
-      this.brewCofAmt = 3;
-      println("black");
-    }
-    else if (this.cofType == "cafe au lait"){
-      this.espShot = 1;
-      this.milkNum = 2;
-      this.brewCofAmt = 0;
-      println("cafe au lait");
-    }
-    else if (this.cofType == "espresso"){
-      this.espShot = 3;
-      this.milkNum = 0;
-      this.brewCofAmt = 0;
-      println("espresso");
-    }
-  }
+
   
   
   void drawMenu(){ //draws the menu
