@@ -72,7 +72,7 @@ public void createGUI(){
   G4P.setMouseOverEnabled(false);
   surface.setTitle("Sketch Window");
   button1 = new GButton(this, 1060, 88, 140, 90);
-  button1.setText(" ADD COFFEE");
+  button1.setText(" ADD BREWED COFFEE");
   button1.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   button1.addEventHandler(this, "button1_click1");
   button2 = new GButton(this, 1061, 226, 140, 100);
