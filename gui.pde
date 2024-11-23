@@ -15,44 +15,60 @@
  */
 
 public void button1_click1(GButton source, GEvent event) { //_CODE_:button1:674502:
-  println("ADDED COFEE");
+  //Add C to the ingredients ArrayList, indicating that coffee has been added
   ingredients.add(new String("C"));
 } //_CODE_:button1:674502:
 
 public void button2_click1(GButton source, GEvent event) { //_CODE_:button2:733988:
-  println("ADDED MILK");
+  //Add M to the ingredients ArrayList, indicating that milk has been added
   ingredients.add(new String("M"));
 } //_CODE_:button2:733988:
 
 public void button3_click1(GButton source, GEvent event) { //_CODE_:button3:881086:
-  println("button3 - GButton >> GEvent." + event + " @ " + millis());
+  //Add E to the ingredients ArrayList, indicating that espresso has been added
   ingredients.add(new String("E"));
 } //_CODE_:button3:881086:
 
 public void button4_click1(GButton source, GEvent event) { //_CODE_:button4:557600:
-  println("button4 - GButton >> GEvent." + event + " @ " + millis());
+  
+  //Clearing the cup by removing the elements of the ingredients ArrayList 
+  //by iterating through it
   for (int i = ingredients.size() - 1; i >= 0; i--) {
     ingredients.remove(i);
   }
 } //_CODE_:button4:557600:
 
 public void button5_click1(GButton source, GEvent event) { //_CODE_:button5:368824:
+
+  //Once the start button has been clicked, the draw_welcome variable is false
+  //which leads to the welcome screen no longer being visible
   draw_welcome = false;
+  //Once the start button has been clicked, the enter_name variable is true
+  //as the menu screen is displayed upon starting the simulation
   enter_name = true;
 } //_CODE_:button5:368824:
 
 public void menu_chosen(GDropList source, GEvent event) { //_CODE_:Menu:853666:
+
+  //The variable that allows the menu to be drawn upon selection from the
+  //dropdown GUI element
   String c = Menu.getSelectedText();
 
+  //If the button clicked in the dropdown menu is the button for black coffee
   if (c.equals ("black")) {
+    //The variable for drawing the menu for black coffee is true
     draw_Menu1 = true;
   }
   
+  //If the button clicked in the dropdown menu is the button for cafe au lait
   if (c.equals ("cafe au lait")) {
+    //The variable for drawing the menu for cafe au lait is true
     draw_Menu2 = true;  
-    
   }
+  
+  //If the button clicked in the dropdown menu is the button for espresso
   if (c.equals ("espresso")) {
+    //The variable for drawing the menu for espresso is true
     draw_Menu3 = true;  
     
   }

@@ -81,6 +81,7 @@ void drawIngredients(){
   }  
 }
 
+//The function that draws the welcome screen 
 void drawWelcomeScreen(){
   //Define screen size, then load and draw pre-rendered welcome screen
   size(1280, 650);
@@ -90,6 +91,7 @@ void drawWelcomeScreen(){
   image(welcome, 0, 0);
 }
 
+//The function that draws the menu screen
 void drawMenuScreen(){
   //Define screen size, then load and draw pre-rendered menu screen
   size(1280, 650);
