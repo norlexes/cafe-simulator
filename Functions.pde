@@ -129,6 +129,7 @@ void changeScreens(){
     draw_Menu2 = false; 
     draw_Menu3 = false; 
     Menu.setVisible(false);
+    entername.setVisible(false);
     image(tmi,0,0);
   }
   
