@@ -1,36 +1,14 @@
 //MENU CLASS
 
 class Menu{
-  //FIELDS:
+  //FIELDS
   String cofType; //coffee type from black, cafe au lait, and espresso.
   int espShot, milkNum, brewCofAmt; //espresso shots, amount of milk, amount of brewed coffee
   
   //CONSTRUCTOR
-  Menu(String c){ //constructor later used in GUI
+  Menu(String c){ //constructor later used in GUI, is established as the menu is chosen from the drop down menu.
     this.cofType = c;
   }
-  
-  void checkMenu(){ //checks the menu whether it's black, cafe au lait, or espresso
-    if (this.cofType == "black"){
-      this.espShot = 0;
-      this.milkNum = 0;
-      this.brewCofAmt = 3;
-      println("black");
-    }
-    else if (this.cofType == "cafe au lait"){
-      this.espShot = 1;
-      this.milkNum = 2;
-      this.brewCofAmt = 0;
-      println("cafe au lait");
-    }
-    else if (this.cofType == "espresso"){
-      this.espShot = 3;
-      this.milkNum = 0;
-      this.brewCofAmt = 0;
-      println("espresso");
-    }
-  }
-  
   
   void drawMenu(){ //draws the menu
     //establish variables
@@ -39,28 +17,28 @@ class Menu{
     milk = "Milk Amount: ";
     bc = "Brewed Coffee Amount: ";
     
-
     fill(139,110,70);
     rect(0,0,350,650); //menu background
     
-    //Menu title
+    //Menu title - draws the title for the menu panel
     textSize(30);
     fill(77,53,29);
     text("MENU", 50, 100);
     
     textSize(25);
     fill(0);
-    if (this.cofType == "black"){ //if statements for each menus
+    //if statements for each menus
+    if (this.cofType == "black"){ //if the coffee type is black according to the menu drop down pressed, and lists the ingredients that are needed for this drink
       text(esp+"0", 50, 150); 
       text(milk+"0", 50, 300); 
       text(bc+"3", 50, 450); 
     }
-    else if (this.cofType == "cafe au lait"){
+    else if (this.cofType == "cafe au lait"){ //if the coffee type is cafe au lait according to the menu drop down pressed, and lists the ingredients that are needed for this drink
       text(esp+"1", 50, 150); 
       text(milk+"2", 50, 300); 
       text(bc+"0", 50, 450); 
     }
-    else if (this.cofType == "espresso"){ 
+    else if (this.cofType == "espresso"){ //if the coffee type is espresso according to the menu drop down pressed, and lists the ingredients that are needed for this drink
       text(esp+"3", 50, 150); 
       text(milk+"0", 50, 300); 
       text(bc+"0", 50, 450); 
